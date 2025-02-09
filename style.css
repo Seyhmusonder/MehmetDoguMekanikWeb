@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.top-banner {
+    background-color: #EF202F;
+    color: white;
+    text-align: center;
+    padding: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo img {
+    height: 80px;
+}
+
+.search-bar {
+    display: flex;
+    width: 40%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background: #002842;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.user-actions {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu {
+    background: #002842;
+    padding: 15px 0;
+}
+
+.nav-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.slider {
+    position: relative;
+    margin: 20px 0;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 50px;
+    background: #f9f9f9;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.promo-cards {
+    display: flex;
+    gap: 20px;
+    padding: 20px 50px;
+}
+
+.promo-card {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.promo-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 200px;
+    height: auto;
+}
+
+.price {
+    color: #EF202F;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.discount-badge {
+    background: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
