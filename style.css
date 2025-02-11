@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.top-banner {
+    background-color: #EF202F;
+    color: white;
+    text-align: center;
+    padding: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    border-bottom: 1px solid #eee;
+}
+
+.logo img {
+    height: 80px;
+}
+
+.search-bar {
+    display: flex;
+   
+    width: 40%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background: #002842;
+    color: white;
+    border: none;
+    border-radius: 0 4px 4px 0;
+}
+
+.user-actions {
+    display: flex;
+    gap: 20px;
+}
+
+/* Nav Menu */
+.nav-menu {
+    background: #002842;
+    padding: 15px 0;
+    position: sticky;  /* Sabit kalmasını sağlar */
+    top: 0; /* Sayfa kayarken üstte sabit kalır */
+    z-index: 10; /* Üstteki içeriklerin önünde olmasını sağlar */
+    transition: background-color 0.3s ease; /* Arka plan renginin geçiş efekti */
+}
+
+/* Menü öğeleri */
+.nav-menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+/* Linkler */
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 5px; /* Kenarları yuvarlatır */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Hover efektleri */
+}
+
+/* Hover efekti: Renk değişimi ve büyüme */
+.nav-menu a:hover {
+    background-color: #EF202F;
+    transform: scale(1.1); /* içindeki rengın buyuklugunu ayaralıor */
+}
+
+/* Hover efektine aktif tıklama ekleyelim */
+.nav-menu a:active {
+    transform: scale(0.95);
+}
+
+/* Aktif menü öğesi */
+.nav-menu a.active {
+    background-color: #FF9800;
+    color: white;
+}
+
+/* Menüyü daha belirgin yapalım */
+.nav-menu ul li:hover {
+    background-color: #004C6D; /* Hover rengini biraz daha belirgin yapalım */
+}
+
+
+.slider {
+    position: relative;
+    margin: 20px 0;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 50px;
+    background: #f9f9f9;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.promo-cards {
+    display: flex;
+    gap: 20px;
+    padding: 20px 50px;
+}
+
+.promo-card {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.promo-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+.product-card img {
+    width: 200px;
+    height: auto;
+}
+
+.price {
+    color: #EF202F;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.discount-badge {
+    background: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+
+
+
+.sec-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Tam genişlik */
+    padding: 30px 0; /* Üst ve alttan boşluk */
+  
+
+}
+
+.slider-container {
+    width: 1250px;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   
+   
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    width: 0;
+    transition: width 3s linear;
+    z-index: 10;
+}
+
+/* Responsive tasarım */
+@media screen and (max-width: 1280px) {
+    .slider-container {
+        width: 95%;
+        height: calc((450 / 1250) * 95vw); /* Oranı koruyarak yüksekliği ayarla */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider-container {
+        width: 100%;
+        height: calc((450 / 1250) * 100vw);
+    }
+    
+    .progress-bar {
+        height: 3px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .progress-bar {
+        height: 2px;
+    }
+}
+
+
+
+/* Telefon boyutu için media query */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Dikey hizala */
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        height: 60px; /* Logoyu küçült */
+    }
+
+    .search-bar {
+        width: 100%; /* Arama çubuğunu genişlet */
+        margin: 10px 0;
+    }
+
+    .user-actions {
+        flex-direction: column; /* Giriş ve sepeti dikey hizala */
+        gap: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .nav-menu ul {
+        flex-direction: row; /* Menü öğelerini dikey hizala */
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 12px; /* Yazı boyutunu küçült */
+        padding: 8px 10px;
+    }
+
+    .nav-menu {
+        padding: 10px 0; /* Navbar padding'ini küçült */
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Genel font boyutunu küçült */
+    }
+
+    .top-banner {
+        font-size: 12px; /* Banner font boyutunu küçült */
+    }
+}
