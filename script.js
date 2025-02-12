@@ -48,3 +48,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
  
 
+let currentIndex = 0;
+        function showSlide(index) {
+            const slider = document.getElementById('customSlider');
+            const totalSlides = document.querySelectorAll('.custom-slide').length;
+            if (index >= totalSlides) currentIndex = 0;
+            else if (index < 0) currentIndex = totalSlides - 1;
+            else currentIndex = index;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+
+        // Dropdown menülerin animasyonlu açılması için
+document.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        const dropdown = item.querySelector('.dropdown-menu');
+        dropdown.style.display = 'block';
+        setTimeout(() => {
+            dropdown.style.opacity = '1';
+            dropdown.style.visibility = 'visible';
+            dropdown.style.transform = 'translateX(-50%) translateY(0)';
+        }, 10);
+    });
+
+    item.addEventListener('mouseleave', () => {
+        const dropdown = item.querySelector('.dropdown-menu');
+        dropdown.style.opacity = '0';
+        dropdown.style.visibility = 'hidden';
+        dropdown.style.transform = 'translateX(-50%) translateY(10px)';
+        setTimeout(() => {
+            dropdown.style.display = 'none';
+        }, 300);
+    });
+});
