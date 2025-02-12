@@ -87,3 +87,4 @@ document.querySelectorAll('.nav-item').forEach(item => {
         }, 300);
     });
 });
+

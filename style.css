@@ -413,30 +413,30 @@
     gap: 10px;
 }
 
-.promo-cards {
+.promo-cards-1 {
     display: flex;
     gap: 20px;
     padding: 20px 50px;
 }
 
-.promo-card {
+.promo-card-1 {
     flex: 1;
     border-radius: 8px;
     overflow: hidden;
 }
 
-.promo-card img {
+.promo-card-1 img {
     width: 100%;
     height: auto;
 }
 
-.product-card {
+.product-card-1 {
     border: 1px solid #ddd;
     padding: 15px;
     text-align: center;
 }
 
-.product-card img {
+.product-card-1 img {
     width: 200px;
     height: auto;
 }
@@ -676,35 +676,32 @@
 }
 
 .promo-section {
-    padding: 50px 20px;
-    background-color: #002842;
-    text-align: center;
-    color: white;
+    padding: 50px 0;
+    background: #f8f9fa;
 }
 
-.promo-section h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
+.promo-container {
+    max-width: 1329px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .promo-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 .promo-card {
     background: white;
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
-    width: 400px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
 .promo-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
 
 .promo-card img {
@@ -715,100 +712,31 @@
 
 .promo-content {
     padding: 20px;
-    text-align: center;
 }
 
 .promo-content h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
     color: #002842;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .promo-content p {
-    font-size: 16px;
-    margin-bottom: 15px;
-    color: #555;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
-.promo-content .cta-button {
-    background-color: #EF202F;
-    color: white;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.promo-content .cta-button:hover {
-    background-color: #002842;
-}
+/* Responsive Tasarım */
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 36px;
+    .promo-grid {
+        grid-template-columns: 1fr;
     }
-
-    .hero-content p {
-        font-size: 18px;
-    }
-
-    .product-grid, .promo-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product-card, .promo-card {
-        width: 100%;
-        max-width: 300px;
+    
+    .promo-card img {
+        height: 180px;
     }
 }
-.promo-cards {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px 20px;
-    background-color: #f9f9f9;
-}
 
-.promo-card {
-    flex: 1;
-    max-width: 300px;
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.promo-card:hover {
-    transform: translateY(-10px);
-}
-
-.promo-card h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.promo-card p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
-.promo-card .cta-button {
-    background-color: white;
-    color: #002842;
-    padding: 10px 20px;
-    font-size: 16px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.promo-card .cta-button:hover {
-    background-color: #002842;
-    color: white;
-}
 .icon-section {
     display: flex;
     justify-content: center;
@@ -826,7 +754,7 @@
     width: 80px;
     height: 80px;
     margin-bottom: 15px;
-}
+}   
 
 .icon-card h3 {
     font-size: 20px;
@@ -945,3 +873,793 @@
         transform: translateY(-2px);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
+
+.project-showcase {
+    padding: 50px 0;
+    background: #f8f9fa;
+}
+
+.project-container {
+    max-width: 1329px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 0 15px;
+}
+
+.project-box {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-box:hover {
+    transform: translateY(-5px);
+}
+
+.project-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-box:hover img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-category {
+    display: inline-block;
+    background: #EF202F;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.project-content h3 {
+    color: #002842;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #002842;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.project-btn i {
+    transition: transform 0.3s ease;
+}
+
+.project-btn:hover {
+    color: #EF202F;
+}
+
+.project-btn:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+    .project-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.section-divider {
+    padding: 40px 0;
+    background: #f8f9fa;
+}
+
+.divider-content {
+    max-width: 1329px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.divider-line {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #002842, transparent);
+    flex: 1;
+}
+
+.divider-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #002842;
+    font-size: 16px;
+    padding: 0 20px;
+}
+
+.divider-icon i {
+    font-size: 14px;
+    color: #EF202F;
+}
+
+.divider-icon span {
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Stil 1 - Dalga Efektli */
+.divider-wave {
+    position: relative;
+    height: 60px;
+    background: linear-gradient(45deg, #002842, #1a4c6d, #2d6f98, #3f93c3);
+    overflow: hidden;
+}
+
+.wave-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='1' d='M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 100% 100%;
+}
+
+.wave-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+}
+
+/* Stil 2 - Gradient Efektli */
+.divider-gradient {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.gradient-line {
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #FF416C 25%, 
+        #FF4B2B 50%, 
+        #FF416C 75%, 
+        transparent 100%
+    );
+    position: relative;
+    max-width: 1329px;
+    margin: 0 auto;
+}
+
+.gradient-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 0 20px;
+    color: #002842;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Stil 3 - Modern Çizgili */
+.divider-modern {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    max-width: 1329px;
+    margin: 0 auto;
+}
+
+.modern-line {
+    height: 2px;
+    flex: 1;
+    background: linear-gradient(90deg, #002842, #EF202F);
+}
+
+.modern-line.left {
+    background: linear-gradient(90deg, transparent, #002842);
+}
+
+.modern-line.right {
+    background: linear-gradient(90deg, #EF202F, transparent);
+}
+
+.modern-circle {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border: 2px solid #002842;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    color: #EF202F;
+    animation: pulse 2s infinite;
+}
+
+/* Stil 4 - Animasyonlu */
+.divider-animated {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.animated-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.animated-dots span {
+    width: 8px;
+    height: 8px;
+    background: #002842;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+}
+
+.animated-dots span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.animated-dots span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 32, 47, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(239, 32, 47, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 32, 47, 0);
+    }
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+.main-footer {
+    background: #002842;
+    color: white;
+    position: relative;
+}
+
+.footer-container {
+    max-width: 1329px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Üst Footer */
+.footer-top {
+    padding: 70px 0 40px;
+}
+
+.footer-top .footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+}
+
+/* Logo ve Marka Alanı */
+.brand-col {
+    padding-right: 30px;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+.footer-desc {
+    color: #a8b9c5;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #EF202F;
+    transform: translateY(-3px);
+}
+
+/* Footer Kolonları */
+.footer-col h4 {
+    color: white;
+    font-size: 18px;
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-col h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 2px;
+    background: #EF202F;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #a8b9c5;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-links a::before {
+    content: '→';
+    margin-right: 8px;
+    opacity: 0;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-left: 5px;
+}
+
+.footer-links a:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* İletişim Alanı */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.contact-item i {
+    color: #EF202F;
+    font-size: 18px;
+    padding-top: 3px;
+}
+
+.contact-item p {
+    color: #a8b9c5;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Alt Footer */
+.footer-bottom {
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-bottom .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    color: #a8b9c5;
+    margin: 0;
+}
+
+.bottom-links {
+    display: flex;
+    gap: 20px;
+}
+
+.bottom-links a {
+    color: #a8b9c5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.bottom-links a:hover {
+    color: white;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 992px) {
+    .footer-top .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        padding: 50px 0 30px;
+    }
+    
+    .footer-top .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .brand-col {
+        padding-right: 0;
+    }
+    
+    .footer-bottom .footer-container {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+.promo-section {
+    padding: 50px 20px;
+    background-color:white ;
+    text-align: center;
+    color: white;
+    overflow: hidden; /* Taşan içeriği gizle */
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom:40px ;
+    
+}
+
+.promo-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+
+   
+}
+
+.promo-container {
+    overflow: hidden; /* Taşan içeriği gizle */
+    position: relative;
+}
+
+.promo-grid {
+    display: flex;
+    gap: 20px;
+    animation: scroll 20s linear infinite; /* Sonsuz kaydırma animasyonu */
+}
+
+.promo-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Kartların boyutunu koru */
+}
+
+.promo-card:hover {
+    transform: translateY(-10px);
+}
+
+.promo-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.promo-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.promo-content h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #002842;
+}
+
+.promo-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.promo-content .cta-button {
+    background-color: #EF202F;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.promo-content .cta-button:hover {
+    background-color: #002842;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* Kartların toplam genişliğine göre ayarlayın */
+    }
+}
+
+.promo-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 1329px;
+    margin: 0 auto;
+}
+
+.promo-card-item {
+    padding: 30px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.promo-card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.promo-card-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.promo-card-item:hover::before {
+    opacity: 1;
+}
+
+.promo-card-item h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.promo-card-item p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.promo-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.promo-button:hover {
+    background: rgba(255,255,255,0.3);
+    transform: translateY(-2px);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+    .promo-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .promo-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .promo-card-item {
+        padding: 25px;
+    }
+    
+    .promo-card-item h3 {
+        font-size: 20px;
+    }
+    
+    .promo-card-item p {
+        font-size: 14px;
+    }
+    
+    .promo-button {
+        padding: 10px 25px;
+    }
+}
+
+.section-header {
+    padding: 60px 0 40px 0;
+    background: #f8f9fa;
+    position: relative;
+}
+
+.header-container {
+    max-width: 1329px;
+    margin: 0 auto;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.title-design {
+    display: flex;
+    align-items: center;
+}
+
+.design-line {
+    width: 400px;
+    height: 3px;
+    background: linear-gradient(90deg,
+        transparent,
+        #4a90e2,
+        #50c6db,
+        #b84592,
+        #f26d7d
+    );
+    position: relative;
+    animation: gradientFlow 3s linear infinite;
+    background-size: 200% 200%;
+}
+
+.design-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    animation: shimmer 2s infinite;
+}
+
+.header-title h2 {
+    color: #002842;
+    font-size: 32px;
+    font-weight: 600;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Tüm Projelerimiz için alternatif renk şeması */
+.section-header.all-projects .header-title h2 {
+    color: #EF202F;
+}
+
+.section-header.all-projects .design-line {
+    background: linear-gradient(90deg,
+        transparent,
+        #EF202F,
+        #ff6b81,
+        #ff4757,
+        #ff8a9d
+    );
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) skewX(-15deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(100%) skewX(-15deg);
+        opacity: 0;
+    }
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+    .design-line {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .design-line {
+        width: 150px;
+    }
+    
+    .header-title {
+        gap: 20px;
+    }
+    
+    .header-title h2 {
+        font-size: 24px;
+    }
+}
