@@ -871,11 +871,14 @@
     gap: 20px;
     padding: 50px 20px;
     background-color: white;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 .icon-card {
     text-align: center;
     max-width: 200px;
+    flex: 1 0 100%; /* Make each card take full width on smaller screens */
+    margin-bottom: 20px; /* Space between icon cards */
 }
 
 .icon-card img {
@@ -894,29 +897,36 @@
     font-size: 16px;
     color: #555;
 }
+
 .custom-slider-wrapper {
-    width: 489px;
+    width: 100%;
+    max-width: 489px;
     height: 335px;
     overflow: hidden;
     position: relative;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Center the slider */
 }
+
 .custom-slider-container {
     display: flex;
-    width: 300%; /* 3 Görsel için */
+    width: 300%; /* 3 images for the slider */
     transition: transform 0.5s ease-in-out;
 }
+
 .custom-slide {
     width: 100%;
     flex: 1 0 100%;
 }
+
 .custom-slide img {
     width: 100%;
     height: 357px;
     object-fit: cover;
     border-radius: 12px;
 }
+
 .custom-slider-buttons {
     position: absolute;
     top: 50%;
@@ -925,6 +935,7 @@
     justify-content: space-between;
     transform: translateY(-50%);
 }
+
 .custom-slider-buttons button {
     background: rgba(255, 255, 255, 0.8);
     border: none;
@@ -936,71 +947,178 @@
     font-weight: bold;
     transition: all 0.3s ease;
 }
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
+    .icon-card {
+        max-width: 150px; /* Reduce the size of the icon cards */
+    }
+
+    .icon-card h3 {
+        font-size: 18px; /* Adjust the font size */
+    }
+
+    .icon-card p {
+        font-size: 14px; /* Adjust the font size */
+    }
+
+    .custom-slider-wrapper {
+        width: 100%; /* Make the slider responsive */
+        max-width: 100%;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .custom-slider-buttons button {
+        padding: 10px 15px; /* Adjust button size */
+        font-size: 16px; /* Reduce button text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-section {
+        padding: 30px 10px; /* Reduce padding on smaller screens */
+    }
+
+    .icon-card {
+        max-width: 120px; /* Further reduce the size of the icon cards */
+    }
+
+    .icon-card h3 {
+        font-size: 16px; /* Adjust font size further */
+    }
+
+    .icon-card p {
+        font-size: 12px; /* Adjust font size further */
+    }
+
+    .custom-slider-wrapper {
+        width: 100%;
+        max-width: 100%;
+        height: 250px; /* Adjust height for small screens */
+    }
+
+    .custom-slider-buttons button {
+        padding: 8px 12px; /* Further reduce button size */
+        font-size: 14px; /* Adjust button text size */
+    }
+}
+
 .custom-slider-buttons button:hover {
     background: rgba(255, 255, 255, 1);
-        transform: scale(1.1)
-    }
+    transform: scale(1.1);
+}
+
+.lightning-deals-container {
+    width: 1329px; /* Original slider width */
+    height: 100px;
+    margin: 20px auto;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    background-image: url('/images/dogu-logo-white.png');
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.2s ease;
+}
+
+.lightning-deals-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(239, 32, 47, 0.9), rgba(239, 32, 47, 0.7));
+    z-index: 1;
+}
+
+.lightning-deals {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+}
+
+.lightning-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lightning-icon {
+    font-size: 24px;
+}
+
+.lightning-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.limited-time {
+    font-size: 14px;
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.lightning-deals-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
     .lightning-deals-container {
-        width: 1329px; /* Slider'ların toplam genişliği (820px + 489px + 20px gap) */
-        height: 100px;
-        margin: 20px auto; /* auto margin ile ortalama */
-        border-radius: 8px;
-        position: relative;
-        overflow: hidden;
-        text-decoration: none;
-        display: block;
-        background-image: url('/images/dogu-logo-white.png');
-        background-size: cover;
-        background-position: center;
-        transition: transform 0.2s ease;
+        width: 100%; /* Full width on smaller screens */
+        max-width: 100%;
+        height: 120px; /* Adjust height */
+        margin: 10px auto; /* Adjust margin */
     }
-    
-    .lightning-deals-container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(90deg, rgba(239, 32, 47, 0.9), rgba(239, 32, 47, 0.7));
-        z-index: 1;
-    }
-    
-    .lightning-deals {
-        position: relative;
-        z-index: 2;
-        display: flex;
-        align-items: center;
-        padding: 20px;
-        color: white;
-    }
-    
-    .lightning-left {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .lightning-icon {
-        font-size: 24px;
-    }
-    
+
     .lightning-text {
-        font-size: 20px;
-        font-weight: bold;
+        font-size: 18px; /* Adjust font size */
     }
-    
+
+    .lightning-left {
+        gap: 8px; /* Reduce gap */
+    }
+
+    .lightning-icon {
+        font-size: 22px; /* Adjust icon size */
+    }
+
     .limited-time {
-        font-size: 14px;
-        margin-left: 10px;
-        padding-left: 10px;
-        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        font-size: 12px; /* Adjust font size */
     }
-    
-    .lightning-deals-container:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+    .lightning-deals-container {
+        width: 100%; /* Full width on very small screens */
+        height: 100px; /* Adjust height further for small screens */
+        margin: 10px 0; /* Adjust margin */
     }
+
+    .lightning-text {
+        font-size: 16px; /* Adjust font size for mobile */
+    }
+
+    .lightning-left {
+        gap: 5px; /* Further reduce gap */
+    }
+
+    .lightning-icon {
+        font-size: 20px; /* Adjust icon size */
+    }
+
+    .limited-time {
+        font-size: 10px; /* Adjust font size */
+    }
+}
 
 .project-showcase {
     padding: 50px 0;
@@ -1334,7 +1452,7 @@
 .social-links a {
     width: 40px;
     height: 40px;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1348,6 +1466,61 @@
     background: #EF202F;
     transform: translateY(-3px);
 }
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
+    .footer-top .footer-container {
+        grid-template-columns: 1fr 1fr 1fr; /* 3 columns on tablet */
+        gap: 30px; /* Adjust gap */
+    }
+
+    .brand-col {
+        padding-right: 0; /* Remove extra padding on smaller screens */
+    }
+
+    .footer-logo {
+        height: 40px; /* Reduce logo size */
+    }
+
+    .footer-desc {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    .social-links {
+        justify-content: center; /* Center the social icons */
+        gap: 10px; /* Adjust gap */
+    }
+
+    .social-links a {
+        width: 35px; /* Adjust size of social icons */
+        height: 35px; /* Adjust size of social icons */
+        font-size: 14px; /* Adjust icon font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-top .footer-container {
+        grid-template-columns: 1fr; /* 1 column on mobile */
+        gap: 20px; /* Adjust gap */
+    }
+
+    .footer-desc {
+        font-size: 12px; /* Adjust font size for smaller screens */
+        margin-bottom: 20px; /* Adjust spacing */
+    }
+
+    .social-links {
+        justify-content: center; /* Center social icons */
+        gap: 8px; /* Reduce gap for mobile */
+    }
+
+    .social-links a {
+        width: 30px; /* Reduce social icon size */
+        height: 30px; /* Reduce social icon size */
+        font-size: 12px; /* Reduce icon font size */
+    }
+}
+
 
 /* Footer Kolonları */
 .footer-col h4 {
@@ -1402,6 +1575,50 @@
     opacity: 1;
     transform: translateX(0);
 }
+
+/* Mobile and Tablet Styles */
+@media (max-width: 768px) {
+    /* Footer Columns */
+    .footer-col h4 {
+        font-size: 16px; /* Adjust heading size for tablet */
+        margin-bottom: 20px; /* Reduce margin */
+    }
+
+    .footer-links li {
+        margin-bottom: 10px; /* Adjust list item margin */
+    }
+
+    .footer-links a {
+        font-size: 14px; /* Adjust font size for links */
+    }
+
+    .footer-links a::before {
+        margin-right: 6px; /* Reduce space between arrow and text */
+        font-size: 18px; /* Adjust arrow size */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Footer Columns */
+    .footer-col h4 {
+        font-size: 14px; /* Adjust heading size for mobile */
+        margin-bottom: 15px; /* Reduce margin */
+    }
+
+    .footer-links li {
+        margin-bottom: 8px; /* Reduce list item margin for mobile */
+    }
+
+    .footer-links a {
+        font-size: 12px; /* Adjust font size for links */
+    }
+
+    .footer-links a::before {
+        margin-right: 4px; /* Reduce space between arrow and text */
+        font-size: 16px; /* Adjust arrow size */
+    }
+}
+
 
 /* İletişim Alanı */
 .contact-info {
