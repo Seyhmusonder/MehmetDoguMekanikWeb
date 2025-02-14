@@ -1,1 +1,0 @@
-# Sirket_proje
